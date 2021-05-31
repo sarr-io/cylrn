@@ -3,9 +3,7 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/**",
-                "${workspaceFolder}/Simple AI Lib/**",
-                "${workspaceFolder}/Simple AI Lib/Functions/**"
+                "${workspaceFolder}/**"
             ],
             "defines": [
                 "_DEBUG",

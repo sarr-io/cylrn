@@ -1,4 +1,4 @@
-#include "Core.h"
+#include "Train.h"
 
 std::string totalData[2000];
 
@@ -18,4 +18,3 @@ void Seek::collectData(std::string newData) {
     }
     totalData[0] = newData;
 }
-
