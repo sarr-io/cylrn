@@ -3,8 +3,6 @@
 class Read {
     public:
         void Input(std::string _stringInput);
-    private:
-        void Redirect(std::string _gatheredInput);
 };
 
 class Seek {
@@ -18,7 +16,5 @@ class Seek {
 
 class Store {
     public:
-        void Input(std::string _stringInput);
-    private:
-        void Redirect(std::string _gatheredInput);
+        
 };

@@ -3,10 +3,14 @@
 #include "Push.h"
 #include <string>
 
-class PosAICore {
+class posAIModel {
     public:
-        struct currentModel;
+        class pAILoadedModel {
+            int neuronCount;
+            // Polymorphism will handle the specifics for each bias.
+        };
+
         void Train(std::string _input, std::string _trainSettings[]);
-        void Load(std::string _input, std::string _loadSettings[]);
-        void Push(std::string _outputSettings[]);
+        void Load(std::string _fileDir, std::string _loadSettings[]);
+        void Push(std::string _newInput, pAILoadedModel _currentModel, std::string _outputSettings[]);
 };
