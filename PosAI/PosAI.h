@@ -1,7 +1,10 @@
-#include <string>
-
-class posAIModel {
+class PosAI {
     public:
-        void Train(std::string _input, std::string _trainSettings[]);
-        void Push(std::string _newInput, std::string _loadModelPath, std::string _outputSettings[]);
+        void Train(int _input, int _trainSettings[]) {
+
+        }
+
+        void Push(int _newInput, char _loadModelPath[], int _outputSettings[]) {
+
+        }
 };
