@@ -2,9 +2,10 @@
 
 class sAI {
     
-    // Random numbers to start off with.
-    float weights = rand() % 1 + 100;
-    float biases = rand() % 1 + 100;
+    // Random numbers to start off with. 
+    // CHANGE TO CUSTOM RANDOM ALGORITHM (BETWEEN 0.00-1.00).
+    float weights = rand() % 0 + 1;
+    float biases = rand() % 0 + 1;
 
     public:
         void Train(int _input, int _label, int _trainSettings[]) {
@@ -15,20 +16,30 @@ class sAI {
 
         }
     private:
-        int activation(int n, int _mode) {
+        float activation(int n, int _mode) {
             switch (_mode) {
-                case 1:
-                    // Sigmoid
-                    int result = 1.0 / 1.0 + std::exp(-n);
-                    return result;
                 // Will be PReLU in the future.
                 case 0:
                     // Leaky Rectified Linear Unit
-                    int result;
+                    float lreluResult;
                     if (n < 0) {
-                        result = 0.01 * n;
+                        lreluResult = 0.01 * n;
                     }
-                    return result;
+                    return lreluResult;
+                case 1:
+                    // Sigmoid
+                    float sigResult = 1.0 / 1.0 + custom_exp(-n);
+                    return sigResult;
             }
+        }
+
+        // WILL NOT WORK, NEEDS CHANGE!
+        // FOR LOOP DOES NOT PROPPERLY WORK WITH FLOATER POINT VALUES.
+        float custom_exp(float _n) {
+            float e = 2.71828;
+            for (int i = 0; i < _n; i++) {
+                e *= 2.71828;
+            }
+            return e;
         }
 };
