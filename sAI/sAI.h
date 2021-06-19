@@ -1,6 +1,6 @@
 #include <iostream>
 
-class PosAI {
+class sAI {
     
     // Random numbers to start off with.
     float weights = rand() % 1 + 100;
