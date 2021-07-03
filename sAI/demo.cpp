@@ -2,6 +2,7 @@
 
 sAI ai;
 
+// Not nearly enough data, just for basic testing.
 int trainingData[4] = {
     10001011,
     11011011,

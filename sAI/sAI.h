@@ -22,7 +22,6 @@ class sAI {
                 // Will be PReLU in the future.
                 case 0:
                     // Leaky Rectified Linear Unit
-                    
                     if (n < 0) {
                         result = 0.01 * n;
                     }
@@ -33,9 +32,9 @@ class sAI {
                     return result;
             }
         }
-
+        
         // WILL NOT WORK, NEEDS CHANGE!
-        // FOR LOOP DOES NOT PROPPERLY WORK WITH FLOATER POINT VALUES (2.71828 is not divisible by n+1).
+        // FOR LOOP DOES NOT PROPPERLY WORK WITH FLOATER POINT VALUES (2.71828 is not divisible by n+1 / integer values).
         float custom_exp(float _n) {
             float e = 2.71828;
             for (int i = 0; i < _n; i++) {
