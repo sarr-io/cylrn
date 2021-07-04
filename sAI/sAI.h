@@ -26,20 +26,22 @@ class sAI {
                         result = 0.01 * n;
                     }
                     return result;
-                case 1:
-                    // Sigmoid
-                    float result = 1.0 / 1.0 + custom_exp(-n);
-                    return result;
+                
+                // Will finish later, need first demo working with LReLU
+                // case 1:
+                //     // Sigmoid
+                //     float result = 1.0 / 1.0 + custom_exp(-n);
+                //     return result;
             }
         }
         
         // WILL NOT WORK, NEEDS CHANGE!
         // FOR LOOP DOES NOT PROPPERLY WORK WITH FLOATER POINT VALUES (2.71828 is not divisible by n+1 / integer values).
-        float custom_exp(float _n) {
-            float e = 2.71828;
-            for (int i = 0; i < _n; i++) {
-                e *= 2.71828;
-            }
-            return e;
-        }
+        // float custom_exp(double _n) {
+        //     double e = 2.718281828459045;
+        //     for (int i = 0; i < _n; i++) {
+        //         e *= 2.718281828459045;
+        //     }
+        //     return e;
+        // }
 };
