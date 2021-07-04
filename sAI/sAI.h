@@ -8,7 +8,7 @@ class sAI {
     float biases = rand() % 0 + 1;
 
     public:
-        void Train(int _input, int _label, int _trainSettings[]) {
+        void Train(int _input, int _label, int _trainSettings[4]) {
             
         }
 
@@ -16,7 +16,13 @@ class sAI {
 
         }
     private:
-        float activation(int n, int _mode) {
+        double evaluate(int _data) {} // TLDR; Evaluates the data and finds the neuron with the highest activation.
+
+        double activation_feed() {} // TLDR; Returns the dot product/scalar of the current weights and number (usually the index of a neuron) in a bias,weight for loop.
+
+        double backprop(double _x[], double _y) {} // TLDR; Returns a tuple representing the gradient for the cost function. (Holds a list of activations from _x[])
+
+        double activation(int n, int _mode) {
             switch (_mode) {
                 float result;
                 // Will be PReLU in the future.
