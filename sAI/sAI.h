@@ -1,13 +1,15 @@
 #include <iostream>
 
 class sAI {
-    
-    // Random numbers to start off with. 
-    // CHANGE TO CUSTOM RANDOM ALGORITHM (BETWEEN 0.00-1.00).
-    float weights = rand() % 0 + 1;
-    float biases = rand() % 0 + 1;
 
     public:
+        void __init__(int layer_sizes[]) {
+
+            // Fill each layer with random numbers to start off with.
+            float weights[1];
+            float biases[1];
+        }
+
         void Train(int _input, int _label, int _trainSettings[4]) {
             
         }
@@ -30,6 +32,9 @@ class sAI {
                     // Leaky Rectified Linear Unit
                     if (n < 0) {
                         result = 0.01 * n;
+                    }
+                    else {
+                        result = n;
                     }
                     return result;
                 
