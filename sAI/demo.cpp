@@ -19,9 +19,8 @@ int trainingLabel[4] = {
 
 int main() {
 
-    int trainSettings[4] = {
+    int trainSettings[3] = {
     0, // int activationMode (0 - default [Leaky ReLU], 1 - sigmoid, 2 - ReLU)
-    100, // int minAccuracy (default - 100%)
     0, // int keepThoughts (0 - no, 1 - yes)
     30 // Stopping Epoch / Generation
     };

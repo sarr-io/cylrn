@@ -5,13 +5,17 @@ class sAI {
     public:
         void __init__(int layer_sizes[]) {
 
-            // Fill each layer with random numbers to start off with.
-            float weights[1];
-            float biases[1];
+            // TODO: Fill each layer with random numbers to start off with, using for loop.
+            double weights[1];
+            double biases[1];
+
+            // If layer_sizes is 0 it will automatically choose a recommended amount of layers based on input training size.
         }
 
-        void Train(int _input, int _label, int _trainSettings[4]) {
-            
+        void Train(int input, int label, int train_settings[3]) {
+            int activation_mode = train_settings[0];
+            int keep_thoughts = train_settings[1];
+            int stopping_epoch = train_settings[2];
         }
 
         void Push(int _newInput[], char _loadModelPath[], int _outputSettings[]) {
@@ -26,7 +30,7 @@ class sAI {
 
         double activation(int n, int _mode) {
             switch (_mode) {
-                float result;
+                double result;
                 // Will be PReLU in the future.
                 case 0:
                     // Leaky Rectified Linear Unit
