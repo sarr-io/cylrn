@@ -1,6 +1,6 @@
-#include "sAI.h"
+#include "fydlr.h"
 
-sAI ai;
+fydlr ai;
 
 // Not nearly enough data, just for basic testing.
 int trainingData[4] = {
