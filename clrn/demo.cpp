@@ -1,6 +1,6 @@
-#include "fydlr.h"
+#include "clrn.h"
 
-fydlr ai;
+clrn ai;
 
 // Not nearly enough data, just for basic testing.
 int trainingData[4] = {
@@ -24,6 +24,9 @@ int main() {
     0, // int keepThoughts (0 - no, 1 - yes)
     30 // Stopping Epoch / Generation
     };
+
+    int layers[3] = {8, 4, 6};
+    ai.set_layers(layers);
 
     // The header will automatically adjust the weights and biases each time you feed input via gradient descent functions.
     for (size_t i = 0; i < 4; i++)

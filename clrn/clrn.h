@@ -1,9 +1,9 @@
 #include <iostream>
 
-class sAI {
+class clrn {
 
     public:
-        void __init__(int layer_sizes[]) {
+        void set_layers(int layer_sizes[]) {
 
             // TODO: Fill each layer with random numbers to start off with, using for loop.
             double weights[1];
