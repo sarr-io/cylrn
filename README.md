@@ -1,4 +1,4 @@
-# fydlr
+# clrn
 A free open source compact & modular machine learning library written in C++!
 
 
