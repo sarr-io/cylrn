@@ -11,5 +11,5 @@
 
 
 <p align="center">
-  <img src="https://ko-fi.com/img/githubbutton_sm.svg" onclick="https://ko-fi.com/W7W23Q8TJ">
+  [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W23Q8TJ)
 </p>
