@@ -8,8 +8,4 @@
 </p>
 
 
-
-
-<p align="center">
-  [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W23Q8TJ)
-</p>
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W23Q8TJ)
