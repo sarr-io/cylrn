@@ -1,6 +1,6 @@
 #include <iostream>
 
-class clrn {
+class cylrn {
 
     public:
         void set_layers(int layer_sizes[]) {

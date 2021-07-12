@@ -1,6 +1,6 @@
-#include "clrn.h"
+#include "cylrn.h"
 
-clrn ai;
+cylrn ai;
 
 // Not nearly enough data, just for basic testing.
 int trainingData[4] = {
