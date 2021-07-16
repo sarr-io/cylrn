@@ -2,14 +2,34 @@
 
 class cylrn {
 
+    int layer_count;
+    int *l_sizes;
+    double *weights;
+    double *biases;
+
     public:
+
         void set_layers(int layer_sizes[]) {
 
-            // TODO: Fill each layer with random numbers to start off with, using for loop.
-            double weights[1];
-            double biases[1];
+            layer_count = sizeof(layer_sizes)/sizeof(layer_sizes[0]);
+            l_sizes = layer_sizes;
 
-            // If layer_sizes is 0 it will automatically choose a recommended amount of layers based on input training size.
+            if (layer_count > 0) {
+                // Filling each layer with pseudo-random numbers to start off with, using for loop.
+                for (int i = 0; i < layer_count; i++)
+                {
+                    for (size_t i = 0; i < sizeof(l_sizes)/sizeof(l_sizes[0]); i++)
+                    {
+                        // TODO: Custom random number algorith, then mod() it down to 0-1.
+                        weights[i] = 0;
+                        biases[i] = 0;
+                    }
+                }
+            }
+            else { // If layer_sizes is 0 it will automatically choose a recommended amount of layers based on input training size.
+
+            }
+
         }
 
         void Train(int input, int label, int train_settings[3]) {
