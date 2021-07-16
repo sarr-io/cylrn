@@ -10,7 +10,6 @@
 
 Download
 =============
-Say goodbye to all those expensive *ancient*-interface electrical and mechanical simulators!
 | Build | Version |
 | --- | --- |
 | `beta` | There **have not** been any betas yet.|
