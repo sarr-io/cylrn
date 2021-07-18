@@ -87,7 +87,6 @@ class cylrn {
                     // Nothing
                 }
             }
-            
         }
         
         // WILL NOT WORK, NEEDS CHANGE!
