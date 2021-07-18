@@ -29,7 +29,6 @@ class cylrn {
             else { // If layer_sizes is 0 it will automatically choose a recommended amount of layers based on input training size.
 
             }
-
         }
 
         void Train(int input, int label, int train_settings[3]) {
