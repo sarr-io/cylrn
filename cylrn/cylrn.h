@@ -9,29 +9,17 @@ class cylrn {
 
     public:
 
-        void set_layers(int layer_sizes[]) {
-
-            layer_count = sizeof(layer_sizes)/sizeof(layer_sizes[0]);
-            l_sizes = layer_sizes;
-
-            // Filling each layer with pseudo-random numbers to start off with, using for loop.
-            for (int i = 0; i < layer_count; i++)
-            {
-                for (size_t i = 0; i < sizeof(l_sizes)/sizeof(l_sizes[0]); i++)
-                {   
-                    // Just to make people mad
-                    char *w_addr = (char*)&weights;
-                    char *b_addr = (char*)&biases;
-                    weights[i] = pseudo_ran(w_addr, i);
-                    biases[i] = pseudo_ran(b_addr, i);
-                }
-            }
-        }
-
-        void Train(int input, int label, int train_settings[3]) {
+        void Train(int input[], int label[], int (&train_settings)[3], int layer_sizes[], int sizes_len) {
             int activation_mode = train_settings[0];
             int keep_thoughts = train_settings[1];
             int stopping_epoch = train_settings[2];
+
+            if (sizes_len > 0) {
+                randomize_layers(layer_sizes, sizes_len);
+            }
+            else {
+                // TODO: get length of input and generate layer_sizes, then start training
+            }
         }
 
         void Push(int _newInput[], char _loadModelPath[], int _outputSettings[]) {
@@ -40,9 +28,15 @@ class cylrn {
 
     private:
 
-        double evaluate(int _data) {} // TLDR; Evaluates the data and finds the neuron with the highest activation.
+        // TLDR; Evaluates the data and finds the neuron with the highest activation.
+        double evaluate(int _data) {
+            return 0;
+        } 
 
-        double backprop(double _x[], double _y) {} // TLDR; Returns a tuple representing the gradient for the cost function. (Holds a list of activations from _x[])
+        // TLDR; Returns a tuple representing the gradient for the cost function. (Holds a list of activations from _x[])
+        double backprop(double _x[], double _y) {
+            return 0;
+        } 
 
         double activation(int n, int _mode) {
             switch (_mode) {
@@ -58,7 +52,7 @@ class cylrn {
                     }
                     return result;
                 
-                // Will finish later, need first demo working with LReLU
+                // Will finish later, need first demo working with Leaky ReLU
                 // case 1:
                 //     // Sigmoid
                 //     float result = 1.0 / 1.0 + custom_exp(-n);
@@ -66,27 +60,30 @@ class cylrn {
             }
         }
 
-        // Will more than likely replace in the future.
-        double pseudo_ran(char var_addr[], int n) {
-            for (int i = 2; i < sizeof(var_addr)/sizeof(var_addr[0]); i++)
+        // Filling each layer with pseudo-random numbers to start off with, using for loop.
+        void randomize_layers(int layer_sizes[], int length) {
+            for (int i = 0; i < length; i++)
             {
-                try
-                {
-                    int seed = (int)var_addr[i] * n;
-                    // Random system of equations that generates a random-looking number.
-                    double num = ((seed / 100 * 345287 + 12 / 1200) / 0.4233 + 1) - 2 % 1;
-                    if(num > 1) {
-                        return 1;
-                    }
-                    else {
-                        return num;
-                    }
-                }
-                catch(int filler)
-                {
-                    // Nothing
+                for (int v = 0; i < layer_sizes[i]; i++)
+                {   
+                    weights[v] = pseudo_ran(v * v, v);
+                    biases[v] = pseudo_ran(v + v, v);
                 }
             }
+        }
+
+        // Will more than likely replace in the future.
+        double pseudo_ran(int seed, int n) {
+            int new_seed = seed * n;
+            // Random system of equations that generates a random-looking number.
+            double num = ((new_seed / 100 * 345287 + 12 / 1200) / 0.4233 + 1) - 2 % 1;
+            if(num > 1) {
+                return 1;
+            }
+            else {
+                return num;
+            }
+            std::cout << num << std::endl;
         }
         
         // WILL NOT WORK, NEEDS CHANGE!

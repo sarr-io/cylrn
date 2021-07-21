@@ -25,14 +25,11 @@ int main() {
     30 // Stopping Epoch / Generation
     };
 
-    int layers[3] = {8, 4, 6};
-    ai.set_layers(layers);
+    int layers[3] = {8, 4, 6}; // 8 is the # of dimensions for each individual training sample.
+    int arr_size = sizeof layers / sizeof layers[0];
 
-    // The header will automatically adjust the weights and biases each time you feed input via gradient descent functions.
-    for (size_t i = 0; i < 4; i++)
-    {
-        ai.Train(trainingData[i], trainingLabel[i], trainSettings);
-    }
+    ai.Train(trainingData, trainingLabel, trainSettings, layers, arr_size);
+    //ai.Push();
 
     return 0;
 }
