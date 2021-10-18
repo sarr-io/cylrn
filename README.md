@@ -15,6 +15,6 @@ Download
 | `beta` | There **have not** been any betas yet.|
 | `release` | There **have not** been any releases yet.|
 
-<a href="https://patreon.com/sarrio">
+<a href="https://www.patreon.com/join/sarrio/">
   <img src="https://user-images.githubusercontent.com/49985341/137796738-217f6fc6-bcba-4d67-924e-63cc9e292a17.png">
 </a>
