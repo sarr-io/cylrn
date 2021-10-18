@@ -5,7 +5,7 @@
 </p>
 </h1>
 <p align="center">
-  An compact & dynamic open source artificial intelligence library written in C++!
+  A compact & dynamic open source artificial intelligence library written in C++!
 </p>
 
 Download
