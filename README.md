@@ -14,5 +14,3 @@ Download
 | --- | --- |
 | `beta` | There **have not** been any betas yet.|
 | `release` | There **have not** been any releases yet.|
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W23Q8TJ)
