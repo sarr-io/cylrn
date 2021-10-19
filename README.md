@@ -5,7 +5,7 @@
 </p>
 </h1>
 <p align="center">
-  A free open source compact & dynamic artificial intelligence library written in C++!
+  A compact & dynamic open source artificial intelligence library written in C++!
 </p>
 
 Download
@@ -15,4 +15,6 @@ Download
 | `beta` | There **have not** been any betas yet.|
 | `release` | There **have not** been any releases yet.|
 
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W23Q8TJ)
+<a href="https://www.patreon.com/join/sarrio/">
+  <img src="https://user-images.githubusercontent.com/49985341/137796738-217f6fc6-bcba-4d67-924e-63cc9e292a17.png">
+</a>
