@@ -18,18 +18,18 @@ int trainingLabel[4] = {
 };
 
 int main() {
-
+    
     int trainSettings[3] = {
-    0, // int activationMode (0 - default [Leaky ReLU], 1 - sigmoid, 2 - ReLU)
-    0, // int keepThoughts (0 - no, 1 - yes)
-    30 // Stopping Epoch / Generation
+        0, // int activationMode (0 - default [Leaky ReLU], 1 - sigmoid, 2 - ReLU)
+        0, // int keepThoughts (0 - no, 1 - yes)
+        30 // Stopping Epoch / Generation
     };
-
+    
     int layers[3] = {8, 4, 6}; // 8 is the # of dimensions for each individual training sample.
     int arr_size = sizeof layers / sizeof layers[0];
-
-    ai.Train(trainingData, trainingLabel, trainSettings, layers, arr_size);
+    
+    ai.Train(trainingData, trainingLabel, trainSettings, layers, arr_size); 
     //ai.Push();
-
+    
     return 0;
 }

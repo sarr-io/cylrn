@@ -31,5 +31,6 @@
 *.out
 *.app
 
-# Ignore folder named '.vscode'
+# Ignore editor folders
 .vscode/
+.4coder/
